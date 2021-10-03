@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +12,128 @@ body {
   background: linear-gradient(to top, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
   color: #f2f2f2;
+  font-family: 'Gemunu Libre', sans-serif;
+  .intro-text {
+    font-weight: 300;
+    font-size: 3.5rem;
+  }
+}
 
-  min-height: 100vh;
+.main-content {
+  display: flex;
+  flex-direction: column;
 
-  div {
+  margin-top: 5vh;
+  
+  text-align: center;
+  
+  width: 100vw;
+  height: 95vh;
+
+  form {
     display: flex;
+    align-items: center;
     justify-content: center;
+
+    input {
+      font-size: 1rem;
+      
+      height: 45px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #020202;
+      padding: 5px;
+
+      background-color: #f2f2f2;
+    }
+
+    .time-to-do {
+      margin-left: 5px;
+    }
+  }
+}
+
+.things-list {
+  align-self: center;
+
+  margin-top: 10px;
+  margin-bottom: 0.5rem;
+
+  padding: 10px;
+
+  height: 69.5vh;
+  width: calc(50vw + 45px);
+  border: solid 2px #020202;
+  border-radius: 5px;
+}
+
+.new-item {
+  padding: 5px;
+  border: solid 1px #020202;
+  margin-top: -1px;
+}
+
+
+// button effect
+button {
+  position: relative;
+  height: 45px;
+  width: 150px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #020202;
+  border: 1px #020202 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: #f2f2f2;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+
+.fill:hover {
+  color: #f2f2f2;
+  border-color: #020202;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: #020202;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+.fill:hover:before {
+  top: 0;
+}
+
+@media screen and (max-width: 800px) {
+  form {
+    flex-direction: column;
+
+    input {
+      width: 350px !important;
+    }
+  }
+  .to-do {
+    margin-top: 20px;
+  }
+  .time-to-do {
+    margin-left: 0 !important;
+    margin-top: 5px;
   }
 }
