@@ -39,9 +39,44 @@ class ListItems extends React.Component {
                     display: "none"
                 })}/>
             </div>
+            <AddListItems />
         </div>
         );
     }   
 }
 
-export default ListItems
+class AddListItems extends React.Component {
+    constructor (props) {
+        super (props)
+        this.state = {
+            class: 'new-item',
+            display: 'flex'
+        }
+
+        this.markAsDone = this.markAsDone.bind(this)
+    }
+    
+    markAsDone() {
+        if (this.state.class === "new-item") {
+            this.setState({
+                class: "new-item done-item"
+            })
+        } else if (this.state.class === "new-item done-item") {
+            this.setState({
+                class: "new-item"
+            })
+        }
+    }
+
+    render () {
+        return (
+            <div className={this.state.class} 
+            onClick={() => this.markAsDone()}
+            style={{display: this.state.display}}>
+                <h1>submits here</h1>
+            </div>
+        )
+    }
+}
+
+export default ListItems    

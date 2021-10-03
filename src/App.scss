@@ -41,6 +41,9 @@ body {
 
       background-color: #f2f2f2;
     }
+    input:focus {
+      outline: none;
+    }
 
     .time-to-do {
       margin-left: 5px;
