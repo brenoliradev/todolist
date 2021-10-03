@@ -84,8 +84,9 @@ body {
   cursor: pointer;
 }
 
-.new-item:focus {
-  text-decoration: line-through;
+.done-item {
+  text-decoration: line-through !important;
+  color: green !important;
 }
 
 .new-item:nth-child(1) {

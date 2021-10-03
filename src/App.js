@@ -1,4 +1,5 @@
 import './App.scss';
+import Things from './Things.js';
 import { Icon } from '@iconify/react';
 
 function App() {
@@ -12,16 +13,7 @@ function App() {
           <button className="fill" type="submit">Add it!</button>
         </form>
         <div className="things-list">
-          <div className="new-item">
-            <h2>Click to mark as done</h2>
-            <h3>Time left</h3>
-            <Icon className="button-close" icon="carbon:close-filled" color="#020202" width="35" height="35" />
-          </div>
-          <div className="new-item">
-            <h2>Add a new task</h2>
-            <h3>Time left</h3>
-            <Icon className="button-close" icon="carbon:close-filled" color="#020202" width="35" height="35" />
-          </div>
+          <Things />
         </div>
       </div>
     </body>
@@ -34,7 +26,6 @@ const calculateTimeLeft = () => {
 
   const difference = +new Date(`10/01/${year}`) - +new Date();
 };
-
 
 
 export default App;
