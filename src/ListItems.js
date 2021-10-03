@@ -2,7 +2,7 @@ import React from "react"
 import { Icon } from '@iconify/react';
 import { findByLabelText } from "@testing-library/dom";
 
-class Things extends React.Component {
+class ListItems extends React.Component {
     constructor(props) {
         super(props) 
 
@@ -28,18 +28,20 @@ class Things extends React.Component {
 
     render () {
         return (
-        <div className={this.state.class} 
-        onClick={() => this.markAsDone()}
-        style={{display: this.state.display}}>
-            <h2>Click to mark as done</h2>
-            <h3>Time left</h3>
-            <Icon className="button-close" icon="carbon:close-filled" color="#020202" width="35" height="35" 
-            onClick={() => this.setState ({
-                display: "none"
-            })}/>
+        <div className="things-list">
+            <div className={this.state.class} 
+            onClick={() => this.markAsDone()}
+            style={{display: this.state.display}}>
+                <h2>Click to mark as done</h2>
+                <h3>Time left</h3>
+                <Icon className="button-close" icon="carbon:close-filled" color="#020202" width="35" height="35" 
+                onClick={() => this.setState ({
+                    display: "none"
+                })}/>
+            </div>
         </div>
         );
     }   
 }
 
-export default Things
+export default ListItems

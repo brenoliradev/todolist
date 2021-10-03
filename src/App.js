@@ -1,5 +1,5 @@
 import './App.scss';
-import Things from './Things.js';
+import ListItems from './ListItems.js';
 import { Icon } from '@iconify/react';
 
 function App() {
@@ -12,9 +12,7 @@ function App() {
           <input id="time-left" className="time-to-do" type="number" placeholder="How much days left?" min="0" autoComplete="off" required/>
           <button className="fill" type="submit">Add it!</button>
         </form>
-        <div className="things-list">
-          <Things />
-        </div>
+          <ListItems />
       </div>
     </body>
   );
