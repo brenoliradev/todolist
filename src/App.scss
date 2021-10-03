@@ -14,7 +14,6 @@ body {
   color: #f2f2f2;
   font-family: 'Gemunu Libre', sans-serif;
   .intro-text {
-    font-weight: 300;
     font-size: 3.5rem;
   }
 }
@@ -31,10 +30,6 @@ body {
   height: 95vh;
 
   form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     input {
       font-size: 1rem;
       
@@ -63,16 +58,43 @@ body {
 
   height: 69.5vh;
   width: calc(50vw + 45px);
-  border: solid 2px #020202;
-  border-radius: 5px;
 }
 
 .new-item {
   padding: 5px;
   border: solid 1px #020202;
   margin-top: -1px;
+  background-color: #f2f2f2;
+  color: #020202;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .button-close:hover {
+    color: rgb(209, 57, 57) !important;
+    cursor: pointer;
+  }
 }
 
+.new-item:hover {
+  cursor: pointer;
+}
+
+.new-item:focus {
+  text-decoration: line-through;
+}
+
+.new-item:nth-child(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.new-item:nth-last-child(1) {
+  border-bottom: 2px solid #020202;
+}
 
 // button effect
 button {
@@ -115,6 +137,7 @@ button {
   top: 100%;
   z-index: -1;
   -webkit-transition: top 0.09s ease-in;
+  transition: top 0.09s ease-in;
 }
 
 .fill:hover:before {
@@ -126,7 +149,7 @@ button {
     flex-direction: column;
 
     input {
-      width: 350px !important;
+      width: 300px !important;
     }
   }
   .to-do {
@@ -135,5 +158,8 @@ button {
   .time-to-do {
     margin-left: 0 !important;
     margin-top: 5px;
+  }
+  .things-list {
+    width: 300px !important;
   }
 }
