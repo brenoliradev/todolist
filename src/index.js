@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import ListItems from './ListItems.js'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ListItems/>
   </React.StrictMode>,
   document.getElementById('root')
 );
