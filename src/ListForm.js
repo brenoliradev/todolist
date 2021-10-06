@@ -1,9 +1,12 @@
 import './App.scss';
+import { palette } from '@material-ui/system';
 import React, {useState} from 'react';
+import { TextField, Typography } from '@mui/material';
+import Button from '@material-ui/core/Button';
 
 function ListForm(props) {
-  const [input, setInput] = useState('');
-  const [timeInput, setTime] = useState('');
+  const [input, setInput] = useState(props.edit ? props.edit.valueText : '');
+  const [timeInput, setTime] = useState(props.edit ? props.edit.valueTime : '');
 
   const handleChange = e => {
     setInput(e.target.value)
@@ -27,26 +30,27 @@ function ListForm(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-        <input 
-          className="to-do" 
+    <form className='todo-form' onSubmit={handleSubmit}>
+        <TextField  id="filled-basic" 
+          label="What to do now?"   
+          variant="filled"
+          className="textfield"
           type="text" 
-          placeholder="Input what you will do"
           name="text"
           value={input}
           autoComplete="off" required
           onChange={handleChange}
-        />
-        <input 
-          id="time-left" 
-          className="time-to-do" 
+          />
+        <TextField id="filled-basic" 
+          label="How much days left?" 
+          variant="filled"
+          className="textfield"
           type="number" 
-          placeholder="How much days left?" 
           value={timeInput}
           min="0" autoComplete="off" required
           onChange={timeChange}
           />
-        <button className="fill" type="submit">Add it!</button>
+        <Button variant="contained" type="submit">ADD IT!</Button>
       </form>
   );
 }

@@ -1,5 +1,5 @@
-import React, {useState} from "react"
-import ListForm from "./ListForm"
+import React, {useState} from "react";
+import ListForm from "./ListForm";
 import ListTodo from "./ListTodo";
 
 function ListItems() {
@@ -21,7 +21,7 @@ function ListItems() {
         }
 
         setTodos(prev => prev.map(item => item.id === todoId ? newValue : item))
-    }  ;
+    };
 
     const removeTodo = id => {
         const removeArr = [...todos].filter(todo => todo.id !== id)
@@ -41,7 +41,7 @@ function ListItems() {
 
     return (
         <>
-        <div className="main-content">
+        <div className="main-cover">
         <p className="intro-text">TO DO LIST</p>
         <ListForm onSubmit={addTodo}/>
         <ListTodo 

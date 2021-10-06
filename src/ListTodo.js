@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ListForm from './ListForm';
+import './App.scss';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
 
@@ -26,8 +27,9 @@ const ListTodo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
       key={index}
     >
-      <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-        {todo.text}
+      <div className="todo-text" key={todo.id} onClick={() => completeTodo(todo.id)}>
+        <p>{todo.text}</p>
+        <p>{todo.time}</p>
       </div>
       <div className='icons'>
         <RiCloseCircleLine
@@ -35,11 +37,11 @@ const ListTodo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
           className='delete-icon'
         />
         <TiEdit
-          onClick={() => setEdit({ id: todo.id, value: todo.text })}
+          onClick={() => setEdit({ id: todo.id, valueText: todo.text, valueTime: todo.time })}
           className='edit-icon'
         />
+        </div>
       </div>
-    </div>
   ));
 };
 
