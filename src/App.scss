@@ -39,7 +39,7 @@ body {
     background-color: white;
     color: #020202;
 
-    width: 25vw;
+    width: 55%;
   }
 
   .textfield:nth-child(2) {
@@ -100,18 +100,16 @@ body {
     rgba(255, 84, 17, 1) 100%
   );
 
-  cursor: pointer;
-
-  padding: 6px;
   border-radius: 5px;
-  width: 80%;
+  width: 60%;
 }
 
 .todo-text {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 16px;
+  cursor: pointer;
 }
 
 .todo-row:nth-child(4n + 1) {
@@ -141,19 +139,20 @@ body {
 .icons {
   display: flex;
   align-items: center;
-  font-size: 24px;
-  cursor: pointer;
 
   margin-left: 3px;
+  padding-right: 12px;
 }
 
 .delete-icon {
-  margin-right: 5px;
+  margin-right: 5px;  
   color: #fff;
+  cursor: pointer;
 }
 
 .edit-icon {
   color: #fff;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
