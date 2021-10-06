@@ -26,7 +26,7 @@ body {
 
 .main-cover {
   min-height: 100vh;
-  padding-bottom: 8px;
+  padding-bottom: 22px 0 8px;
 }
 
 .todo-form {
@@ -40,11 +40,6 @@ body {
     color: #020202;
 
     width: 55%;
-  }
-
-  .textfield:nth-child(2) {
-    margin-left: 6px;
-    margin-right: 3px;
   }
 }
 
