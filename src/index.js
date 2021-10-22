@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import ListItems from './ListItems';
+import './index.scss';
+import ListItems from './components/ListItems';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+
 import ListForm from "./ListForm";
 import ListTodo from "./ListTodo";
 
@@ -41,15 +42,15 @@ function ListItems() {
 
     return (
         <>
-        <div className="main-cover">
-        <p className="intro-text">TO DO LIST</p>
-        <ListForm onSubmit={addTodo}/>
-        <ListTodo 
-        todos={todos} 
-        completeTodo={completeTodo} 
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}/>
-        </div>
+            <div className="main-cover">
+                <p className="intro-text">TO DO LIST</p>
+                <ListForm onSubmit={addTodo}/>
+                <ListTodo 
+                    todos={todos} 
+                    completeTodo={completeTodo} 
+                    removeTodo={removeTodo}
+                    updateTodo={updateTodo}/>
+            </div>
         </>
     );
 

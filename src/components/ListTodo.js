@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import ListForm from './ListForm';
-import './App.scss';
+
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
+
+import ListForm from './ListForm';
+import '../App.scss';
+import '../colors.scss';
 
 const ListTodo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   const [edit, setEdit] = useState({
@@ -24,7 +27,7 @@ const ListTodo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
 
   return todos.map((todo, index) => (
       <div
-        className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
+        className={todo.isComplete ? 'todo-row complete' : 'todo-row' }
         key={index}
       >
         <div className="todo-text" key={todo.id} onClick={() => completeTodo(todo.id)}>

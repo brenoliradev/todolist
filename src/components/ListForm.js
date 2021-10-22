@@ -1,7 +1,9 @@
-import './App.scss';
 import React, {useState} from 'react';
 import { TextField } from '@mui/material';
 import Button from '@material-ui/core/Button';
+
+import '../App.scss';
+import '../colors.scss';
 
 function ListForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.valueText : '');
